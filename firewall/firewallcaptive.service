@@ -1,0 +1,12 @@
+[Unit]
+Description=Firewall do captive portal.
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/sbin/firewallcaptive.sh start
+ExecStop=/usr/sbin/firewallcaptive.sh stop
+
+[Install]
+WantedBy=multi-user.target

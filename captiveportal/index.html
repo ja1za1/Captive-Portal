@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="materialize/css/materialize.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/logo_IF.ico" type="image/x-icon">
+    <title>Login</title>
+  </head>
+
+  <style>
+    body 
+    {
+      background-image: url('imgs/IF-Sudeste-MG.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+    }
+  </style>
+
+  <body>
+    
+    <div style=" padding-top: 4.5%">
+      
+      <div class="container center-align" style="background-color:rgba(0,0,0,.6); width: 70vh; padding-top: 0.5%;">
+
+        <h2>Login</h2>
+
+        <div class="container center-align valign-wrapper" style="height: 20vh; width: 50vh; font-style: italic;">
+          <p>Use seu usuário e senha cadastrados na secretaria do IF para poder conectar-se à internet.</p>
+        </div>
+
+          <form method="post" action="/cgi-bin/captive-portal.cgi">
+
+            <div class="input-field s12 container center-align" style="width: 50vh;">
+                <input placeholder="Nome de usuário" id="usuario" name="usuario" type="text" class="validate" style="color: white;">
+                <label for="name">Usuário</label>
+            </div>
+
+            <div class="input-field s12 container center-align" style="width: 50vh;">
+              <input placeholder="Senha de usuário" id="senha" name="senha" type="password" class="validate" style="color: white;">
+              <label for="password">Senha</label>
+            </div>
+        
+            <div class="container center-align valign-wrapper" style="height: 17vh; width: 45vh;">
+              <input type="submit" value="Entrar class="btn container" style="width: auto;">
+            </div>
+
+          </form>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"> </script>
+
+  </body>
+
+</html>

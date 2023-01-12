@@ -1,0 +1,7 @@
+Colocar o arquivo captiveportal.conf na pasta /etc/httpd/conf.d/ - Esse é o arquivo de configuração do captive portal, o virtual host na porta 20000 é o captive em http e o virtual host na porta 443 é o captive em https.
+
+LEMBRE-SE DE ALTERAR O IP PARA UMA FAIXA VÁLIDA NA SUA REDE.
+
+CASO DÊ ALGUM ERRO RELACIONADO A SSL, LEMBRE-SE DE INSTALAR O MOD_SSL
+
+dnf install mod_ssl

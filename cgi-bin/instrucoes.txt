@@ -1,0 +1,26 @@
+Copie esses arquivos para pasta /var/www/cgi-bin - Esses arquivos são a lógica do captive portal. O arquivo captive-portal.cgi valida os dados enviados pelo formulário e retorna uma página html dependendo se o usuário é válido ou não. Caso o usuário seja válido, adiciona uma regra no iptables que marca o endereço IP e adiciona a regra de timeout também. O arquivo usuários.txt contêm os usuários e senha que podem fazer login no captive portal.
+
+LEMBRE DE ALTERAR O IP DO HREF NO ARQUIVO PARA UMA FAIXA DE IP VÁLIDA NA SUA REDE.
+
+LEMBRAR DE ATIVAR O SUID NO captive-portal.cgi PARA EXECUTAR COMO ROOT.
+
+chmod u+s captive-portal.cgi
+
+OUTRA COISA IMPORTANTE É MUDAR O DONO E O GRUPO DOS ARQUIVOS captive-portal.cgi e usuarios.txt PARA apache.
+
+chown apache:apache captive-portal.cgi
+chown apache:apache usuarios.txt
+
+E POR ÚLTIMO, PARA PERMITIR QUE O USUÁRIO APACHE EXECUTE O COMANDO IPTABLES E O AT (agendar o timeout).
+
+# Digite o comando abaixo (abrirá o arquivo sudoers)
+
+visudo
+
+# Escreva a linha abaixo dentro do arquivo (pode ser em qualquer lugar)
+
+apache ALL=NOPASSWD:/sbin/iptables,/bin/at
+
+CASO NÃO TENHA O COMANDO AT, SIMPLESMENTE DIGITE:
+
+dnf install at

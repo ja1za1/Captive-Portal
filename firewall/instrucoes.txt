@@ -1,0 +1,3 @@
+# copiar o firewallcaptive.sh para diretório /usr/sbin
+
+# copiar o firewallcaptive.service para o diretório /usr/lib/systemmd/system/
