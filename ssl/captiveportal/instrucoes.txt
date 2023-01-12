@@ -1,0 +1,1 @@
+Colocar os certificados dentro do diretorio /etc/httpd/ssl/captiveportal
