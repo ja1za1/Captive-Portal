@@ -1,1 +1,0 @@
-Copie essa pasta captiveportal para o diretório /var/www/html/ - Contêm os arquivos referentes a página html do captive portal (favicon, css, html).
